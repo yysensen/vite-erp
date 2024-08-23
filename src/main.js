@@ -8,6 +8,6 @@ const pinia = createPinia()
 const app = createApp(App);
 app.use(router); // 使用路由
 app.use(pinia)
-
+devalue(pinia.state.value)
 // 挂载应用
 app.mount('#app');

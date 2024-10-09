@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // 根目录
+    "paths": {
+      "@/*": [
+        "src/*"
+      ] // 使用 @ 表示 src 目录
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

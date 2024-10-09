@@ -1,18 +1,18 @@
 <template class="home-page">
   <div>
-    <h1>Welcome to the Home Page</h1>
+    <h1>Home Page Loaded</h1>
+    <!-- 调试输出 -->
     <p>This is a basic template for a Vue 3 view page.</p>
-    <a-button @click="goToLogin">Go to Login</a-button>
+    <a-button @click="goToLogin">登录</a-button>
   </div>
 </template>
 
 <script setup>
-import { useRouter } from "vue-router";
-
-const router = useRouter();
+import { useNavigation } from '@/utils/routerUtils'; // 引入封装的路由工具
+const { navigateTo } = useNavigation();
 
 function goToLogin() {
-  router.push("/login");
+  navigateTo('/login');
 }
 </script>
 
